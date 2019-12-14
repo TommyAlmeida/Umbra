@@ -8,3 +8,5 @@
 #else
 #error Umbra only supports Windows!
 #endif
+
+#define BIT(x) (1 << x)

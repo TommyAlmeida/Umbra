@@ -147,6 +147,9 @@
     <ClInclude Include="src\Umbra\Application.h" />
     <ClInclude Include="src\Umbra\Core.h" />
     <ClInclude Include="src\Umbra\EntryPoint.h" />
+    <ClInclude Include="src\Umbra\Events\Event.h" />
+    <ClInclude Include="src\Umbra\Events\KeyEvent.h" />
+    <ClInclude Include="src\Umbra\Events\MouseEvent.h" />
     <ClInclude Include="src\Umbra\Log.h" />
   </ItemGroup>
   <ItemGroup>

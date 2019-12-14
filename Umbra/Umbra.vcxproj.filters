@@ -19,6 +19,9 @@
     <ClInclude Include="src\Umbra\Log.h">
       <Filter>Umbra</Filter>
     </ClInclude>
+    <ClInclude Include="src\Umbra\Events\Event.h" />
+    <ClInclude Include="src\Umbra\Events\KeyEvent.h" />
+    <ClInclude Include="src\Umbra\Events\MouseEvent.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Umbra\Application.cpp">
