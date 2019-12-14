@@ -4,6 +4,7 @@
 
 #include <stdint.h>
 #include "Umbra/Application.h"
+#include "Umbra/Log.h"
 
 // Entry point
 #include "Umbra/EntryPoint.h"
