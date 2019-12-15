@@ -22,6 +22,7 @@
     <ClInclude Include="src\Umbra\Events\Event.h" />
     <ClInclude Include="src\Umbra\Events\KeyEvent.h" />
     <ClInclude Include="src\Umbra\Events\MouseEvent.h" />
+    <ClInclude Include="src\Umbra\Io\Input.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Umbra\Application.cpp">
@@ -30,5 +31,6 @@
     <ClCompile Include="src\Umbra\Log.cpp">
       <Filter>Umbra</Filter>
     </ClCompile>
+    <ClCompile Include="src\Umbra\Io\Input.cpp" />
   </ItemGroup>
 </Project>

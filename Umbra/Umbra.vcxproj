@@ -143,6 +143,7 @@
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="src\Umbra\Io\Input.h" />
     <ClInclude Include="src\Umbra.h" />
     <ClInclude Include="src\Umbra\Application.h" />
     <ClInclude Include="src\Umbra\Core.h" />
@@ -153,6 +154,7 @@
     <ClInclude Include="src\Umbra\Log.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\Umbra\Io\Input.cpp" />
     <ClCompile Include="src\Umbra\Application.cpp" />
     <ClCompile Include="src\Umbra\Log.cpp" />
   </ItemGroup>

@@ -22,7 +22,7 @@ namespace Umbra {
 		EventCategoryApplication = BIT(0),
 		EventCategoryInput		 = BIT(1),
 		EventCategoryKeyboard	 = BIT(2),
-		EventCategoryGamepad	 = BIT(2),
+		EventCategoryGamepad	 = BIT(3),
 		EventCategoryMouse		 = BIT(4),
 		EventCategoryMouseButton = BIT(5),
 	};
