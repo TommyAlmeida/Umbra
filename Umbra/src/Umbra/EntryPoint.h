@@ -14,6 +14,7 @@ int main(int argc, char** argv) {
 
 	auto app = Umbra::CreateApplication();
 	app->Run();
+
 	delete app;
 
 	UB_CLIENT_INFO("App has been terminated");

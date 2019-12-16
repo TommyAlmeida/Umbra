@@ -12,7 +12,7 @@ namespace Umbra {
 		None = 0,
 		WindowClose, WindowResize, WindowLostFocus, WindowMoved,
 		AppTick, AppUpdate, AppRender,
-		KeyPressed, KeyReleased, 
+		KeyPressed, KeyReleased, KeyTyped,
 		//TODO: Add gamepad events
 		MouseButtonPressed, MouseButtonReleased, MouseMoved, MouseScrolled
 	};

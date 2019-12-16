@@ -25,27 +25,11 @@ namespace Umbra {
 		Shutdown();
 	}
 
-	Scope<Window> Window::Create(const WindowOptions& options) 
+	Scope<Window> Window::Create(const WindowOptions& options)
 	{
 		return CreateScope<WinFrame>(options);
 	}
 
-	void WinFrame::OnUpdate()
-	{
-		glfwPollEvents();
-		//TODO: We need to swap buffers or we will have troubles
-	}
-
-	void WinFrame::SetVSync(bool enabled)
-	{
-		enabled ? glfwSwapInterval(1) : glfwSwapInterval(0);
-		wf_Data.VSync = enabled;
-	}
-
-	bool WinFrame::IsVSync() const
-	{
-		return wf_Data.VSync;
-	}
 
 	void WinFrame::Init(const WindowOptions& options)
 	{
@@ -63,10 +47,8 @@ namespace Umbra {
 			glfwSetErrorCallback(GLFWErrorCallback);
 		}
 
-		{
-			gl_Window = glfwCreateWindow((int)options.Width, (int)options.Height, wf_Data.Title.c_str(), nullptr, nullptr);
-			++s_GLFWWindowCount;
-		}
+		gl_Window = glfwCreateWindow((int) options.Width, (int) options.Height, wf_Data.Title.c_str(), nullptr, nullptr);
+		++s_GLFWWindowCount;
 
 		glfwSetWindowUserPointer(gl_Window, &wf_Data);
 		SetVSync(true);
@@ -153,6 +135,12 @@ namespace Umbra {
 			});
 	}
 
+	void WinFrame::OnUpdate()
+	{
+		glfwPollEvents();
+		glfwSwapBuffers(gl_Window);
+	}
+
 	void WinFrame::Shutdown()
 	{
 		glfwDestroyWindow(gl_Window);
@@ -162,5 +150,16 @@ namespace Umbra {
 		{
 			glfwTerminate();
 		}
+	}
+
+	void WinFrame::SetVSync(bool enabled)
+	{
+		enabled ? glfwSwapInterval(1) : glfwSwapInterval(0);
+		wf_Data.VSync = enabled;
+	}
+
+	bool WinFrame::IsVSync() const
+	{
+		return wf_Data.VSync;
 	}
 }

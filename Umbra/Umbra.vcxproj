@@ -153,11 +153,13 @@
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="src\Platforms\Windows\WinFrame.h" />
     <ClInclude Include="src\Umbra.h" />
     <ClInclude Include="src\Umbra\Application.h" />
     <ClInclude Include="src\Umbra\Core.h" />
     <ClInclude Include="src\Umbra\EntryPoint.h" />
     <ClInclude Include="src\Umbra\Events\Event.h" />
+    <ClInclude Include="src\Umbra\Events\General\WindowEvent.h" />
     <ClInclude Include="src\Umbra\Events\KeyEvent.h" />
     <ClInclude Include="src\Umbra\Events\MouseEvent.h" />
     <ClInclude Include="src\Umbra\Graphics\Window.h" />
@@ -165,6 +167,7 @@
     <ClInclude Include="src\ubpch.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\Platforms\Windows\WinFrame.cpp" />
     <ClCompile Include="src\Umbra\Application.cpp" />
     <ClCompile Include="src\Umbra\Graphics\Window.cpp" />
     <ClCompile Include="src\Umbra\Io\Log.cpp" />
@@ -176,6 +179,9 @@
     <ProjectReference Include="vendor\GLFW\GLFW.vcxproj">
       <Project>{154B857C-0182-860D-AA6E-6C109684020F}</Project>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\Platforms\OpenGL\.gitkeep" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

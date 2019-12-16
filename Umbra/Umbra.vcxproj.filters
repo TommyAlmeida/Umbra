@@ -41,6 +41,8 @@
       <Filter>Umbra\Io</Filter>
     </ClInclude>
     <ClInclude Include="src\ubpch.h" />
+    <ClInclude Include="src\Platforms\Windows\WinFrame.h" />
+    <ClInclude Include="src\Umbra\Events\General\WindowEvent.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Umbra\Application.cpp">
@@ -53,5 +55,9 @@
       <Filter>Umbra\Io</Filter>
     </ClCompile>
     <ClCompile Include="src\ubpch.cpp" />
+    <ClCompile Include="src\Platforms\Windows\WinFrame.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\Platforms\OpenGL\.gitkeep" />
   </ItemGroup>
 </Project>
