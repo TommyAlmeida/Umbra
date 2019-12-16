@@ -1,9 +1,8 @@
 #pragma once
 
-#include <memory>
-#include "Umbra/Core.h"
 #include "spdlog/spdlog.h"
 #include "spdlog/sinks/stdout_color_sinks.h"
+#include "Umbra/Core.h"
 
 namespace Umbra {
 	class UMBRA_API Log

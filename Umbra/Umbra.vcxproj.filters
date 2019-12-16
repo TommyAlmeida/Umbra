@@ -7,6 +7,9 @@
     <Filter Include="Umbra\Events">
       <UniqueIdentifier>{A028C71D-8C8B-56C2-3511-8F7821532245}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Umbra\Graphics">
+      <UniqueIdentifier>{FC639747-E831-8B4D-D1C5-FB73BD3267B2}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Umbra\Io">
       <UniqueIdentifier>{8350F9A0-6F1D-54AC-9836-42548462893A}</UniqueIdentifier>
     </Filter>
@@ -31,8 +34,8 @@
     <ClInclude Include="src\Umbra\Events\MouseEvent.h">
       <Filter>Umbra\Events</Filter>
     </ClInclude>
-    <ClInclude Include="src\Umbra\Io\Input.h">
-      <Filter>Umbra\Io</Filter>
+    <ClInclude Include="src\Umbra\Graphics\Window.h">
+      <Filter>Umbra\Graphics</Filter>
     </ClInclude>
     <ClInclude Include="src\Umbra\Io\Log.h">
       <Filter>Umbra\Io</Filter>
@@ -43,8 +46,8 @@
     <ClCompile Include="src\Umbra\Application.cpp">
       <Filter>Umbra</Filter>
     </ClCompile>
-    <ClCompile Include="src\Umbra\Io\Input.cpp">
-      <Filter>Umbra\Io</Filter>
+    <ClCompile Include="src\Umbra\Graphics\Window.cpp">
+      <Filter>Umbra\Graphics</Filter>
     </ClCompile>
     <ClCompile Include="src\Umbra\Io\Log.cpp">
       <Filter>Umbra\Io</Filter>

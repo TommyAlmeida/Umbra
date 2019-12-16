@@ -1,3 +1,4 @@
+#include "ubpch.h"
 #include "Log.h"
 
 namespace Umbra {

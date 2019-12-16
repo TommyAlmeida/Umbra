@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Core.h"
+#include "Umbra/Core.h"
 
 namespace Umbra {
 	class UMBRA_API Application
