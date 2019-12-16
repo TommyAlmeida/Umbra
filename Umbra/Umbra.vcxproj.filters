@@ -4,6 +4,12 @@
     <Filter Include="Umbra">
       <UniqueIdentifier>{3C983E0E-A8AC-66BF-712E-0A1FDD0163F0}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Umbra\Events">
+      <UniqueIdentifier>{A028C71D-8C8B-56C2-3511-8F7821532245}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Umbra\Io">
+      <UniqueIdentifier>{8350F9A0-6F1D-54AC-9836-42548462893A}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Umbra.h" />
@@ -16,24 +22,33 @@
     <ClInclude Include="src\Umbra\EntryPoint.h">
       <Filter>Umbra</Filter>
     </ClInclude>
-    <ClInclude Include="src\Umbra\Events\Event.h" />
-    <ClInclude Include="src\Umbra\Events\KeyEvent.h" />
-    <ClInclude Include="src\Umbra\Events\MouseEvent.h" />
-    <ClInclude Include="src\Umbra\Io\Input.h" />
-    <ClInclude Include="src\Umbra\Io\Log.h">
-      <Filter>Umbra</Filter>
+    <ClInclude Include="src\Umbra\Events\Event.h">
+      <Filter>Umbra\Events</Filter>
     </ClInclude>
+    <ClInclude Include="src\Umbra\Events\KeyEvent.h">
+      <Filter>Umbra\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Umbra\Events\MouseEvent.h">
+      <Filter>Umbra\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Umbra\Io\Input.h">
+      <Filter>Umbra\Io</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Umbra\Io\Log.h">
+      <Filter>Umbra\Io</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ubpch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Umbra\Application.cpp">
       <Filter>Umbra</Filter>
     </ClCompile>
-    <ClCompile Include="src\Umbra\Io\Input.cpp" />
-    <ClCompile Include="src\Umbra\Io\Log.cpp">
-      <Filter>Umbra</Filter>
+    <ClCompile Include="src\Umbra\Io\Input.cpp">
+      <Filter>Umbra\Io</Filter>
     </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="cpp.hint" />
+    <ClCompile Include="src\Umbra\Io\Log.cpp">
+      <Filter>Umbra\Io</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ubpch.cpp" />
   </ItemGroup>
 </Project>
