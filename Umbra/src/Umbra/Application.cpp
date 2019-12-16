@@ -1,4 +1,3 @@
-#include "../ubpch.h"
 #include "Application.h"
 
 namespace Umbra {
