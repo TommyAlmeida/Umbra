@@ -3,6 +3,7 @@
 #include "Umbra/Core.h"
 
 #include <string>
+#include <sstream>
 #include <functional>
 
 namespace Umbra {

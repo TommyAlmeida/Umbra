@@ -4,66 +4,89 @@
 #include "Event.h"
 
 namespace Umbra {
-	class MouseMoveEvent : public Event
+	class MouseMovedEvent : public Event
 	{
 	public:
-		inline int GetMouseX() const { return e_mouseX; }
-		inline int GetMouseY() const { return e_mouseY; }
+		MouseMovedEvent(float x, float y)
+			: m_MouseX(x), m_MouseY(y) {}
 
-		EVENT_CLASS_CATEGORY(EventCategoryMouse | EventCategoryInput)
-		EVENT_CLASS_TYPE(MouseMoved)
-	protected:
-		MouseMoveEvent(float x, float y) {
-			this->e_mouseX = x;
-			this->e_mouseY = y;
+		inline float GetX() const { return m_MouseX; }
+		inline float GetY() const { return m_MouseY; }
+
+		std::string ToString() const override
+		{
+			std::stringstream ss;
+			ss << "MouseMovedEvent: " << m_MouseX << ", " << m_MouseY;
+			return ss.str();
 		}
-		
-		float e_mouseX;
-		float e_mouseY;
+
+		EVENT_CLASS_TYPE(MouseMoved)
+			EVENT_CLASS_CATEGORY(EventCategoryMouse | EventCategoryInput)
+	private:
+		float m_MouseX, m_MouseY;
+	};
+
+	class MouseScrolledEvent : public Event
+	{
+	public:
+		MouseScrolledEvent(float xOffset, float yOffset)
+			: m_XOffset(xOffset), m_YOffset(yOffset) {}
+
+		inline float GetXOffset() const { return m_XOffset; }
+		inline float GetYOffset() const { return m_YOffset; }
+
+		std::string ToString() const override
+		{
+			std::stringstream ss;
+			ss << "MouseScrolledEvent: " << GetXOffset() << ", " << GetYOffset();
+			return ss.str();
+		}
+
+		EVENT_CLASS_TYPE(MouseScrolled)
+			EVENT_CLASS_CATEGORY(EventCategoryMouse | EventCategoryInput)
+	private:
+		float m_XOffset, m_YOffset;
 	};
 
 	class MouseButtonEvent : public Event
 	{
 	public:
-		inline int GetMouseButton() const { return e_mouseButton; }
+		inline int GetMouseButton() const { return m_Button; }
 
-		EVENT_CLASS_CATEGORY(EventCategoryMouseButton | EventCategoryInput)
+		EVENT_CLASS_CATEGORY(EventCategoryMouse | EventCategoryInput)
 	protected:
-		MouseButtonEvent(int mouseButton)
-			: e_mouseButton(mouseButton) {}
+		MouseButtonEvent(int button)
+			: m_Button(button) {}
 
-		int e_mouseButton;
+		int m_Button;
 	};
 
-	class MouseButtonPressed : public MouseButtonEvent
+	class MouseButtonPressedEvent : public MouseButtonEvent
 	{
 	public:
-		MouseButtonPressed(int mouseButton, int repeatCount) 
-			: MouseButtonEvent(mouseButton), e_RepeatCount(repeatCount) {}
+		MouseButtonPressedEvent(int button)
+			: MouseButtonEvent(button) {}
 
 		std::string ToString() const override
 		{
 			std::stringstream ss;
-			ss << "MouseButtonPressentEvent: " << e_mouseButton << " (" << e_RepeatCount << " repeats)";
-
+			ss << "MouseButtonPressedEvent: " << m_Button;
 			return ss.str();
 		}
 
 		EVENT_CLASS_TYPE(MouseButtonPressed)
-	protected:
-		int e_RepeatCount;
 	};
 
-	class MouseButtonReleased : public MouseButtonEvent
+	class MouseButtonReleasedEvent : public MouseButtonEvent
 	{
 	public:
-		MouseButtonReleased(int mouseButton)
-			: MouseButtonEvent(mouseButton) {}
+		MouseButtonReleasedEvent(int button)
+			: MouseButtonEvent(button) {}
 
 		std::string ToString() const override
 		{
 			std::stringstream ss;
-			ss << "MouseButtonReleased: " << e_mouseButton;
+			ss << "MouseButtonReleasedEvent: " << m_Button;
 			return ss.str();
 		}
 

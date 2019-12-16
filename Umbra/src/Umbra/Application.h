@@ -10,7 +10,6 @@ namespace Umbra {
 		virtual ~Application();
 
 		void Run();
-
 	};
 
 	//TODO: To be defined on the client
