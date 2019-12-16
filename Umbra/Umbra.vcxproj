@@ -151,12 +151,15 @@
     <ClInclude Include="src\Umbra\Events\Event.h" />
     <ClInclude Include="src\Umbra\Events\KeyEvent.h" />
     <ClInclude Include="src\Umbra\Events\MouseEvent.h" />
-    <ClInclude Include="src\Umbra\Log.h" />
+    <ClInclude Include="src\Umbra\Io\Log.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Umbra\Io\Input.cpp" />
     <ClCompile Include="src\Umbra\Application.cpp" />
-    <ClCompile Include="src\Umbra\Log.cpp" />
+    <ClCompile Include="src\Umbra\Io\Log.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="cpp.hint" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

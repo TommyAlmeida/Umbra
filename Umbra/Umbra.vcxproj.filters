@@ -16,21 +16,24 @@
     <ClInclude Include="src\Umbra\EntryPoint.h">
       <Filter>Umbra</Filter>
     </ClInclude>
-    <ClInclude Include="src\Umbra\Log.h">
-      <Filter>Umbra</Filter>
-    </ClInclude>
     <ClInclude Include="src\Umbra\Events\Event.h" />
     <ClInclude Include="src\Umbra\Events\KeyEvent.h" />
     <ClInclude Include="src\Umbra\Events\MouseEvent.h" />
     <ClInclude Include="src\Umbra\Io\Input.h" />
+    <ClInclude Include="src\Umbra\Io\Log.h">
+      <Filter>Umbra</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Umbra\Application.cpp">
       <Filter>Umbra</Filter>
     </ClCompile>
-    <ClCompile Include="src\Umbra\Log.cpp">
+    <ClCompile Include="src\Umbra\Io\Input.cpp" />
+    <ClCompile Include="src\Umbra\Io\Log.cpp">
       <Filter>Umbra</Filter>
     </ClCompile>
-    <ClCompile Include="src\Umbra\Io\Input.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="cpp.hint" />
   </ItemGroup>
 </Project>
